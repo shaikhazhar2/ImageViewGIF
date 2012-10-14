@@ -41,32 +41,17 @@ public class ImageViewGIF extends ImageView{
 	canvas.drawColor(Color.BLACK);
 	super.onDraw(canvas);
 	long now=android.os.SystemClock.uptimeMillis();
-//	System.out.println("now="+now);
+
 	if (movieStart == 0) { // first time
 		movieStart = now;
 
 	}
-//	System.out.println("\tmoviestart="+movieStart);
+
 	int relTime = (int)((now - movieStart) % mMovie.duration()) ;
-//	System.out.println("time="+relTime+"\treltime="+mMovie.duration());
+
 	mMovie.setTime(relTime);
 	mMovie.draw(canvas,0,0);
 	this.invalidate();
 	}
 
-//	@Override
-//	protected void onDraw(Canvas canvas) {
-//		canvas.drawColor(Color.TRANSPARENT);
-//		super.onDraw(canvas);
-//		long now = android.os.SystemClock.uptimeMillis();
-//		if (movieStart == 0) {
-//			movieStart = now;
-//		}
-//		if (mMovie != null) {
-//			int relTime = (int) ((now - movieStart) % mMovie.duration());
-//			mMovie.setTime(relTime);
-//			mMovie.draw(canvas, 0, 0);
-//			this.invalidate();
-//		}
-//	}
 }
