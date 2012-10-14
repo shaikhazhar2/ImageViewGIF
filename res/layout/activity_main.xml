@@ -1,0 +1,11 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gif="http://schemas.android.com/apk/res/com.hotveryspicy.imageviewgif"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.hotveryspicy.imageviewgif.ImageViewGIF
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        gif:image="@drawable/happydance" />
+
+</RelativeLayout>
